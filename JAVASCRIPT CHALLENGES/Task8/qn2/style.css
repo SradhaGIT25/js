@@ -1,0 +1,37 @@
+.paragraph-hideshow{
+    display:none;
+}
+.container{
+    margin-top:300px;
+    margin-left:80px;
+    margin-right:80px;
+    padding-top:50px;
+    padding-bottom:50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    background-color:antiquewhite;
+    border:2px solid gray;
+}
+.buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+#someText{
+    border:2px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+    border-radius:10px;
+}
+#submitbtn,#togglebtn{
+    background-color:aliceblue;
+    border:2px solid gray;
+    border-radius:10px;
+    padding:5px;
+}

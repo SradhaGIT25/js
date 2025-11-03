@@ -1,0 +1,55 @@
+body{
+    box-sizing:border-box;
+    background-color:peachpuff;
+}
+.heade{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:30px 20px;
+}
+.heade h1{
+    font-style:none;
+    font-family:arial;
+    color:brown;
+    font-family:cursive;
+}
+.heade small{
+    font-style:italic;
+}
+span{
+    font-family:cursive;
+    font-size:25px;
+}
+#dog{
+    display:flex;
+    justify-self:center;
+    padding-left:70px;
+    padding-bottom:50px;
+}
+.adder{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:50px 0px;
+    gap:20px;
+    border:1px solid whitesmoke;
+    border-radius:10px;
+    height:150px;
+}
+#dog{
+    display:flex;
+    justify-content:center;
+
+}
+.displayedImage{
+    width:200px;
+    height:300px;
+    margin-right:10px;
+}
+
+.uploader{
+    display:none;
+}

@@ -1,0 +1,27 @@
+#addContent{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    column-gap:20px;
+    row-gap:20px;
+    border:1px solid black;
+    padding:20px;
+    background-color:lightgray;
+    border-radius: 5px;
+}
+.one{
+    border:1px solid gray;
+    padding:20px;
+    background-color:rgb(240, 231, 231);
+    font-style:italic;
+    border-radius: 5px;
+}
+h1{
+   display:flex;
+   justify-self:center;
+   font-style:italic;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   color:rgb(85, 67, 44); 
+}
+body{
+    background-color:rgb(214, 214, 185);
+}

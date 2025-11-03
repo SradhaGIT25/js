@@ -1,0 +1,6 @@
+const date=new Date()
+console.log(date)
+let dateformatUS=date.toLocaleDateString("en-US");
+console.log(dateformatUS);
+let dateformatGB=date.toLocaleDateString("en-GB");
+console.log(dateformatGB);
