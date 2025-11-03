@@ -68,21 +68,3 @@ function isInserting(array1,array2,position){
     // console.log(isInserting([1, 2, 3], [4, 5, 6], 2));
 
 
-// function isInserting(array1,array2,position){
-//     if(!Array.isArray(array1) || !Array.isArray(array2) || typeof position !== "number" || position < 0){
-//         return false;
-//     }
-//     else{
-//         let newArray=[];
-//         // return [array1.slice(0,(position)) , array2 , array1.slice(position,array1.length)]
-    // for(let i=0;i<array1.length;i++){
-    //     for(let j=0;j<array2.length;j++){
-    //          if(i==position-1){
-    //          array1.push(array2[j]);
-            
-    //    }
-    //      }
-    // }
-    // return array1;
-// }
-// console.log(isInserting([1, 2, 3], [4, 5, 6], 2));
