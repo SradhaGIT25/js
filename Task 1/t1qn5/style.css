@@ -1,0 +1,29 @@
+#countLabel{
+    font-size:90px;
+    font-family:arial;
+    font-weight:500;
+    color:grey;
+}
+#buttons{
+    display:flex;
+    flex-direction:row;
+    gap:30px;
+    justify-content:center;
+    align-items:center;
+}
+#increase,#decrease,#reset{
+    font-size:20px;
+    padding:10px 15px;
+    font-family:arial;
+    font-weight:500;
+    background-color:lightblue;
+    color:black;
+    border-radius:5px;
+}
+#counter{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    justify-content:center;
+    align-items:center;
+}
