@@ -1,4 +1,21 @@
 const date=new Date();
-console.log(date);
-const format=new Intl.DateTimeFormat("Asia/Kolkata").format(date);
-console.log(format);
+console.log(formatting(date));
+function formatting(date){
+const format=new Intl.DateTimeFormat("en-US", {
+    timeZone: "Asia/Kolkata",
+dateStyle:"full",
+timeStyle:"long",
+}).format(date);
+return format;
+}
+
+
+console.log(formatting(date));
+function formatting(date){
+const format=new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+dateStyle:"full",
+timeStyle:"long",
+}).format(date);
+return format;
+}
