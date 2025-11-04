@@ -11,6 +11,5 @@ function subArrays(array,size){
     }
             return newArray;
     }
-console.log(subArrays([1,2,3,4,5],1
-))
-// console.log(subArrays([1,9,6,3,2],3))
+console.log(subArrays([1,2,3,4,5],1))
+console.log(subArrays([1,9,6,3,2],3))
