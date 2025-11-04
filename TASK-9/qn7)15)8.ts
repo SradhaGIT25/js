@@ -1,37 +1,45 @@
+type stringArray=string[];
+function anagramCheck(words:stringArray){
+    const dup:string[] = [];
+ 
+        let newArray:string[]=[];
+        let mainArray=[];
+        let sarray=[]
+        let group:string[]=[]
 
-let words=["care", "race", "acre", "dog", "god", "cat"]
-let arraytemp=[];
-let temporary1=[];
-let temporary2=[];
-let temporary3=[];
-for(let i=0;i<=words.length-1;i++){
-    let word=words[i];
-    let sorted=word.split('').sort().join('');
-    // console.log(sorted);
-    arraytemp.push(sorted);
-    // console.log(arraytemp);
-}
-for(let i=0;i<=arraytemp.length-1;i++){
-    for(let j=0;j<=arraytemp.length-1;j++){
-        temporary1.push(arraytemp[i]); 
-        if(arraytemp[i]==arraytemp[i+1]){
-            temporary1.push(arraytemp[i+1]);
+        let str1=""
+        let str2=""
+
+         for(let i=0;i<words.length;i++){
+            const word=words[i];
+        const sorted=word.split('').sort()
+            sarray.push(sorted);
+        
+         }
+
+
+for(let j=0;j<sarray.length;j++){
+    let key=sarray[j].join("");
+    for(let i=0;i<words.length;i++){
+        const word=words[i];
+        if(typeof word !== "string"){
+            return false;
+        } 
+        if(!dup.includes(word)){
+            if(key===word.split("").sort().join("")){
+            
+            newArray.push(word);
+                dup.push(word);
+        }
     }
-    else{
-        temporary2.push(arraytemp[i+1]);
-        if(arraytemp[i]==arraytemp[i+1]){
-            temporary2.push(arraytemp[i+1]);
-    }
-    else{
-        temporary3.push(arraytemp[i+1]);
-        if(arraytemp[i]==arraytemp[i+1]){
-            temporary3.push(arraytemp[i+1]);
+     
+            }
+            newArray=[]
+            mainArray.push(newArray);
+        }
+        group=new Set(mainArray);
+        return group;
+    
     }
 
-    }
-    }
-    }
-     console.log(temporary1);
-        console.log(temporary2);
-        console.log(temporary3);
-}
+ 
