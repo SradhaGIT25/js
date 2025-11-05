@@ -1,5 +1,6 @@
 function justified(array,width){
-    let newArray=[];
+    let newArray=[]
+    let newString="";
     let a=[...array];
     console.log(a);
     let str=array.toString();
@@ -11,10 +12,15 @@ function justified(array,width){
     let splits=Math.ceil(len/width);
     console.log(splits);
 
-
+for(let i=0;i<array.length;i++){
+    if(array[i].length<=width){
+        newString=newString+array[i]+" ";
+    }
+}
+console.log(newString);
  
-for(let i=0;i<str.length;i++){
-    let subs=str.slice(0,splits);
+for(let i=0;i<newString.length;i++){
+    let subs=newString.slice(0,width);
     if(subs.length!=0){
         newArray.push(array);
     }
@@ -22,7 +28,7 @@ for(let i=0;i<str.length;i++){
 return newArray;
 }
 console.log(justified(["This", "is", "an", "example", "of", "text", "justification."],16));
-console.log(justified(["What","must","be","acknowledgment","shall","be"]),16);
+// console.log(justified(["What","must","be","acknowledgment","shall","be"]),16);
 
 
 
