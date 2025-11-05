@@ -25,7 +25,11 @@ for(let i=0;i<newString.length;i++){
         newArray.push(array);
     }
 }
-return newArray;
+// return newArray;
+
+let space=(width*splits)-str.length();
+console.log(space);
+
 }
 console.log(justified(["This", "is", "an", "example", "of", "text", "justification."],16));
 // console.log(justified(["What","must","be","acknowledgment","shall","be"]),16);
