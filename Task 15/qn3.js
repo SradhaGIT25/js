@@ -100,16 +100,16 @@ i=size-2;
 }
 console.log(main)
 
-for(let i=0;i<main.length;i++){
-    console.log(main[i]);
-}
+// for(let i=0;i<main.length;i++){
+//     return (main[i]);
+// }
 
 
 }
 
 
 
-console.log(spiralMatrix(4));
+console.log(spiralMatrix(3));
 
 
 
