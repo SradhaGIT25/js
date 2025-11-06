@@ -20,14 +20,15 @@ for(let i=0;i<array.length;i++){
 console.log(newString);
  
 for(let i=0;i<newString.length;i++){
-    let subs=newString.slice(0,width);
+    let subs=newString.slice(0,splits);
     if(subs.length!=0){
         newArray.push(array);
     }
 }
 // return newArray;
+console.log(newArray);
 
-let space=(width*splits)-str.length();
+let space=(width*splits)-str.length;
 console.log(space);
 
 }
