@@ -118,5 +118,3 @@ console.log(spiralMatrix(4));
 
 
 
-
-
