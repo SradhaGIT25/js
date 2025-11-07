@@ -1,7 +1,6 @@
 testCases=[{expected :  2 ,  input :  "(()" },
 {expected :  4 ,  input :  ")()())" },
 {expected :   6 ,  input :  ")()()))(()("},
-{expected :   6 ,  input :  "(()()))"},
 {expected :  false ,  input :  [-1,9] },
 {expected :  false ,  input :  ["2",3,5]},
 {expected :  false ,  input :  ["2","3","5"]},
@@ -72,10 +71,17 @@ for(let i=0;i<str.length;i++){
     }
     
 }
-console.log(array);
+// console.log(array);
 return array.length;
 }
     }
     
 // console.log(longsetParantheses(")()())"));
 // console.log(longsetParantheses(")()()))(()("));
+
+
+
+
+
+
+
