@@ -10,15 +10,13 @@ function combinations(n,k){
     for(let i=0;i<array.length;i++){
         for(j=0;j<array.length;j++){
             if(i!==j){
-                newArray.push(array[i]);
-                newArray.push(array[j]);
-                 main.push(newArray)
-                // console.log(main)
-                // console.log(newArray);
-        }
+                newArray=[array[i],array[j]]
+                main.push(newArray)
+            }
+         
             }
 
-            main.push(newArray)
+            // main.push(newArray)
            
         }
         
