@@ -84,16 +84,7 @@ for(let i=0;i<string1.length;i++){
         }
     }
 }
-// return false;
-// else{
-//     s=[...new Set(array)];
-//     console.log(s);
-//     for(let i=0;i<array.length;i++){
-//         if(s.includes(array[i])){
-//             return false;
-//         }
-//     }
-// }
+
 
 
     }
