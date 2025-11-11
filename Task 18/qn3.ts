@@ -1,8 +1,8 @@
-// testCases=[{expected : 16  , input : 2},
-// {expected : 25  , input : 3},
-// {expected :  36 , input : 4},
-// {expected :  4 , input : 0},
-// {expected :  0 , input : -2},
+// testCases=[{expected : 30  , input : 5},
+// {expected : 21  , input : 2},
+// {expected :  24 , input : 3},
+// {expected :  15 , input : 0},
+// {expected :  9 , input : -2},
 // {expected :  false , input : [] },
 // {expected :  false , input : [1,2,3,4]},
 // {expected :  false , input : "5"},
@@ -50,3 +50,7 @@ let answer: ((x: number) => number)
 }
 const Piped=Pipe((x)=> x + 5, (x) => x * 3);
 Piped(5);
+Piped(2);
+Piped(3);
+Piped(0);
+Piped(-2);
