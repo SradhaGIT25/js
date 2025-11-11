@@ -1,7 +1,7 @@
 function largestPrimeFac(number){
     let array=[]
     let arr=[]
-    for(let i=number;i>=number-10;i++){
+    for(let i=0;i<=number;i++){
         if(number%i===0){
             array.push(i);
         }
