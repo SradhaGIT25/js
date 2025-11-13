@@ -1,27 +1,48 @@
 type obj={
 id:number,
-profile:
-application:
+profile:pro,
+application:appli,
 }
-type pro={
 
+type pro={
+personal:per,
+professional:prof
 }
 
 type per={
-
+name:string,
+dob:string,
+active:boolean,
+}
+type exp={
+totalYears:number,
+domain:string[],
 }
 type perf={
-
+score:string,
+lastReview:string
 }
 
 type prof={
-
+experience:exp
+performance:per
 }
 
+type appli={
+  position:pos,
+  submission:sub,
+}
+
+type pos={
+  title:string,
+  level:string,
+}
 type sub={
-  
+  date:string,
+  referred:string,
+
 }
-export default function SortCandidatesByScoreAndExperience(candidates){
+export default function SortCandidatesByScoreAndExperience(candidates:obj[]){
 
 let pactive=candidates.filter((candidate)=>candidate.profile.personal.active===true);
 // console.log(pactive)
@@ -73,14 +94,30 @@ let result = (SortByKey(c,'name','asc'));
 
 for(let i=0;i<exp.length;i++){
 let date1:Date=new Date();
+let cyear=date1.getFullYear(),
+let birthYear:Date=new Date(exp[i].personal.dob);
+let year=birthYear.getFullYear()
  let date2:Date=new Date(exp[i].application.submission.date);
-let remdates=(date1.getTime()-date2.getTime());
-let rem=Math.floor(remdates/(1000*24*60*60));
+let remdates:number=(date1.getTime()-date2.getTime());
+let rem:number=Math.floor(remdates/(1000*24*60*60));
 console.log(rem);
 
 exp[i].submittedDaysAgo=rem;
+exp[i].age=cyear-year,
 }
    console.log(exp);
+
+   let perArray:obj[]=[]
+let person={}
+  for(let i=0;i<exp.length;i++){
+    person.name=exp[i].personal.name,
+    person.age=exp[i].age
+    person.experience=exp[i].experience.totalYears,
+    person.score=exp[i].performance.score,
+    person.submittedDaysAgo=exp[i].submittedDaysAgo,
+    perArray.push(person),
+  }
+return perArray;
     
 }
 console.log(SortCandidatesByScoreAndExperience([
