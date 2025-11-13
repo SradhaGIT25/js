@@ -1,3 +1,6 @@
+// type obj={
+
+// }
 function SortCandidatesByScoreAndExperience(candidates){
 
 let pactive=candidates.filter((candidate)=>candidate.profile.personal.active===true);
@@ -48,28 +51,17 @@ let c = (SortByKey(b,'date','asc'));
 let result = (SortByKey(c,'name','asc'));
 
 
-let today=new Date();
-console.log(today);
-let day1=today.getDate();
-console.log(day);
-// let daydiff=
-
 for(let i=0;i<exp.length;i++){
-    let day2=exp[i].application.submission.date.getDate();
-    exp[i].submittedDaysAgo=today-exp[i].application.submission.date;
+let date1:Date=new Date();
+ let date2:Date=new Date(exp[i].application.submission.date);
+let remdates=(date1.getTime()-date2.getTime());
+let rem=Math.floor(remdates/(1000*24*60*60));
+console.log(rem);
+
+exp[i].submittedDaysAgo=rem;
 }
-console.log(exp);
-
-
-
-
-
-
-
-
-
-
-
+   console.log(exp);
+    
 }
 console.log(SortCandidatesByScoreAndExperience([
   {

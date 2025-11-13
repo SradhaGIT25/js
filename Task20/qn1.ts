@@ -1,5 +1,5 @@
 
-export default function TeamSelection(players:string[], teamSize:number){
+function TeamSelection(players:string[], teamSize:number){
 if(!Array.isArray(players)||players.length===0||players===null||players===undefined || typeof teamSize !== "number" ||  teamSize === null || teamSize === undefined){
     return false;
 }
