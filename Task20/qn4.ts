@@ -1,0 +1,145 @@
+function SortCandidatesByScoreAndExperience(candidates){
+
+let pactive=candidates.filter((candidate)=>candidate.profile.personal.active===true);
+// console.log(pactive)
+
+
+let vscore=pactive.filter((p)=>p.profile.professional.performance.score!==null);
+// console.log(vscore);
+
+let exp=vscore.filter((ex)=>ex.profile.professional.experience.totalYears >= 2);
+// console.log(exp);
+
+
+function SortByKey(arr,key,order){
+    let array=[]
+    let newArray=[]
+
+    for(let i=0;i<arr.length;i++){
+        let element=arr[i];
+        array.push(element[key]);
+    }
+
+    if(order==="asc"){
+        array.sort((a,b)=>a-b)
+    }
+    else if(order==="desc"){
+            array.sort((a,b)=>b-a);
+        }
+
+        for(let i=0;i<array.length;i++){
+            let element=array[i];
+            for(let j=0;j<arr.length;j++){
+                let ele= arr[j];
+                if(ele[key]===element){
+                    newArray.push(ele);
+                }
+            }
+        }
+    
+return newArray;
+}
+let a= (SortByKey(exp,'score','desc'));
+
+let b = (SortByKey(a,'totalYears','desc'));
+
+let c = (SortByKey(b,'date','asc'));
+
+let result = (SortByKey(c,'name','asc'));
+
+
+let today=new Date();
+console.log(today);
+let day1=today.getDate();
+console.log(day);
+// let daydiff=
+
+for(let i=0;i<exp.length;i++){
+    let day2=exp[i].application.submission.date.getDate();
+    exp[i].submittedDaysAgo=today-exp[i].application.submission.date;
+}
+console.log(exp);
+
+
+
+
+
+
+
+
+
+
+
+}
+console.log(SortCandidatesByScoreAndExperience([
+  {
+    id: 1001,
+    profile: {
+      personal: { name: "Alice Johnson", dob: "1992-08-12", active: true },
+      professional: {
+        experience: { totalYears: 5, domains: ["frontend", "ui"] },
+        performance: { score: "91%", lastReview: "2024-12-01" }
+      }
+    },
+    application: {
+      position: { title: "Frontend Engineer", level: "Mid" },
+      submission: { date: "2025-02-10", referred: true }
+    }
+  },
+  {
+    id: 1002,
+    profile: {
+      personal: { name: "Brian Lee", dob: "1989-05-05", active: true },
+      professional: {
+        experience: { totalYears: 8, domains: ["backend", "api"] },
+        performance: { score: "87.5%", lastReview: "2024-11-28" }
+      }
+    },
+    application: {
+      position: { title: "Backend Engineer", level: "Senior" },
+      submission: { date: "2025-01-25", referred: false }
+    }
+  },
+  {
+    id: 1003,
+    profile: {
+      personal: { name: "Clara Doe", dob: "1995-11-30", active: false },
+      professional: {
+        experience: { totalYears: 4, domains: ["fullstack"] },
+        performance: { score: "90%", lastReview: "2024-09-05" }
+      }
+    },
+    application: {
+      position: { title: "Fullstack Developer", level: "Mid" },
+      submission: { date: "2025-01-12", referred: true }
+    }
+  },
+  {
+    id: 1004,
+    profile: {
+      personal: { name: "David Kim", dob: "1990-03-17", active: true },
+      professional: {
+        experience: { totalYears: 3, domains: ["frontend"] },
+        performance: { score: null, lastReview: "2024-08-10" }
+      }
+    },
+    application: {
+      position: { title: "UI Developer", level: "Junior" },
+      submission: { date: "2025-02-01", referred: true }
+    }
+  },
+  {
+    id: 1005,
+    profile: {
+      personal: { name: "Eva Green", dob: "1994-10-22", active: true },
+      professional: {
+        experience: { totalYears: 6, domains: ["frontend", "design"] },
+        performance: { score: "93.2%", lastReview: "2024-12-15" }
+      }
+    },
+    application: {
+      position: { title: "Frontend Architect", level: "Senior" },
+      submission: { date: "2025-01-20", referred: false }
+    }
+  }
+]))

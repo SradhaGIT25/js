@@ -1,4 +1,4 @@
-// testCases=[{expected : [ [ 2, 4 ], [ 1, 3 ] ]  , input1 : [1,2,3,4],input2  : x=>x%2===0 },
+// testCases=[{expected : [ [ 2, 4 ], [ 1, 3 ] ]  , input1 : [1,2,3,4],input2  : x=>x%2===0 ,input3 : },
 // {expected : [ [ 3 ], [ 1, 2 , 4 ] ]  , input1 : [1,2,3,4],input2  : x=>x%3===0 },
 // {expected :  false , input1 : [1,2,3,4] ,input2  : 4 },
 // {expected :  false , input1 : [1,2,3,4] ,input2  : [4] },

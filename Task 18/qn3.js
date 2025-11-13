@@ -16,3 +16,4 @@ function Pipe() {
 }
 var Piped = Pipe(function (x) { return x + 5; }, function (x) { return x * 3; });
 Piped(5);
+

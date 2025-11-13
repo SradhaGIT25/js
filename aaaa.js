@@ -1,10 +1,10 @@
-function FindAvailableSeats(seatGrid:number[][], groupSize:number){
-    let newArray:number[][]=[]
-    let array:number[]=[];
-    let seating:number[][]=[];
-    let available:number[][]=[]
-    let r:number=seatGrid.length;
-    let c:number=seatGrid[0].length;
+function FindAvailableSeats(seatGrid, groupSize){
+    let newArray=[];
+    let array=[];
+    let seating=[];
+    let available=[]
+    let r=seatGrid.length;
+    let c=seatGrid[0].length;
 
 
     for(let i=0;i<r;i++){
@@ -17,7 +17,7 @@ function FindAvailableSeats(seatGrid:number[][], groupSize:number){
                 array=[];                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
             array.push(i);
             array.push(j);
-            newArray.push([i,j]);
+            newArray.push(array);
         }
 }
 }
@@ -27,12 +27,11 @@ for(let i=0;i<r;i++){
     for(let j=0;j<newArray.length;j++){
             let ele1=newArray[j];
             let ele2=newArray[j+1];
-        if(ele1[1]-ele2[1]===1){
+        if(ele1[0]===ele2[0] && ele1[1]-ele2[1]===1){
+            seating.push(ele1)
             seating.push(ele2);
         }
-        else{
-            seating.push(ele2);
-        }
+        
         }
         if(seating.length===groupSize){
             available.push(seating[0]);
@@ -40,9 +39,10 @@ for(let i=0;i<r;i++){
         }
     }
 
+
     console.log(available)
     }
     
-// console.log(FindAvailableSeats([[1,0,0],[1,0,1],[1,0,0],[0,0,0],[0,1,0]], 5));
+console.log(FindAvailableSeats([[1,0,0],[1,0,1],[1,0,0],[0,0,0],[0,1,0]], 5));
 // console.log(FindAvailableSeats([[0,0,1],[1,0,1],[1,1,1]], 5));
 // console.log(FindAvailableSeats([[0,0,0],[1,0,1],[1,1,1]], 5));
