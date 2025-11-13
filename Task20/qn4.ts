@@ -1,7 +1,27 @@
-// type obj={
+type obj={
+id:number,
+profile:
+application:
+}
+type pro={
 
-// }
-function SortCandidatesByScoreAndExperience(candidates){
+}
+
+type per={
+
+}
+type perf={
+
+}
+
+type prof={
+
+}
+
+type sub={
+  
+}
+export default function SortCandidatesByScoreAndExperience(candidates){
 
 let pactive=candidates.filter((candidate)=>candidate.profile.personal.active===true);
 // console.log(pactive)
