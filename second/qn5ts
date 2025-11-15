@@ -1,0 +1,51 @@
+function  getValueUntilGreaterThanTen(fetchFn: Array<(x:number) => number>) : (number:number)=>number{  
+   async function fetchFn(number : number){
+        for(let i=0;i<size;i++){
+         number= await number;
+        }
+        console.log(number);
+    }
+    while(fetchFn(numbers)>size){
+    return fetchFn()
+}
+}
+const result=getValueUntilGreaterThanTen(10);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
