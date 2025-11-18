@@ -1,102 +1,98 @@
-// const day=new Date(2025, 1, 4, 13, 44, 3);
-// console.log(day);
-// let year=day.getFullYear()
-// let y=year.toString().slice(2,4);
-// console.log(y)
-// if(year)
-// let 
+
 function dateformatter(date,pattern){
-let p=pattern.split(',');
+let p=pattern.split(/[-,: ]/);
+let result1=[]
+let result2=[]
 for(let i=0;i<p.length;i++){
-   let p1=p[i];
-   let p2=p[i+1];
-   let p1s=p[i].split("-");
-   let p2s=p[i+1].split("-");
-    console.log(p1s)
-
-
+   let s1=p[i];
+   
  let year=date.getFullYear();
 //  console.log(year);
- let month=date.getMonth();
+ let month=date.getMonth()+1;
 //   console.log(month);
  let day=date.getDay();
 //   console.log(day);
  let hours=date.getHours();
 //   console.log(hours);
- let thours=date.getHours();
+ let thours=date.getHours()%12 || 12;
 //   console.log(thours);
  let mins=date.getMinutes();
 //   console.log(mins);
  let sec=date.getSeconds();
 //   console.log(sec);
 
- if(year.toString()==="YY"){
+ if(s1 === "YY"){
 let y=year.toString().slice(2,4);
-console.log(y);    
+console.log(y);
+result1.push(y);    
 }
-else{
+else if(s1==="YYYY"){
     console.log(year);
+    result1.push(year);
 }
+result1.push("-");
 
-if(month==="M"){
-    if(month.toString().length===1){
-        console.log(month)
-    }
-    else{
-        month.padStart(2,'0');
+
+if(s1 ==="M"){
         console.log(month);
+        result1.push(s1);
     }
+    else if(s1 ==="MM"){
+        console.log(month.toString().padStart(2,'0'));
+        result1.push(s1);
+}
+result1.push("-");
+
+if(s1 ==="D"){
+        console.log(day);
+        result1.push(s1);
+    }
+    else if(s1 ==="DD"){
+         console.log(day.toString().padStart(2,'0'));
+         result1.push(s1);
 }
 
-if(day==="D"){
-    if(day.toString().length===1){
-        console.log(day)
-    }
-    else{
-        day.padStart(2,'0');
-         console.log(day);
-    }
-}
 
-if(hours==="H"){
-    if(hours.toString().length===1){
-        console.log(hours)
+if(s1==="H"){
+        console.log(hours);
+        result2.push(s1);
     }
-    else{
-        hours.padStart(2,'0');
-         console.log(hours);
-    }
+    else if(s1==="HH"){
+         console.log(hours.toString().padStart(2,'0'));
+         result2.push(s1);
 }
+result2.push("-");
 
-if(thours==="h"){
-    if(thours.toString().length===1){
-        console.log(thours)
-    }
-    else{
-        thours.padStart(2,'0');
+
+if(s1==="h"){
         console.log(thours);
+        result2.push(s1);
     }
+    else if(s1==="hh"){
+        console.log(thours.toString().padStart(2,'0'));
+        result2.push(s1);
 }
+result2.push("-");
 
-if(mins==="m"){
-    if(mins.toString().length===1){
+if(s1==="m"){
         console.log(mins);
+        result2.push(s1);
     }
-    else{
-        mins.padStart(2,'0');
-        console.log(mins)
-    }
+    else if(s1==="mm"){
+        console.log(mins.toString().padStart(2,'0'));
+        result2.push(s1);
 }
+result2.push("-");
 
-if(sec==="s"){
-    if(sec.toString().length===1){
+
+if(s1==="s"){
         console.log(sec);
+        result2.push(s1);
     }
-    else{
-        sec.padStart(2,'0');
-        console.log(sec)
+    else if(s1==="ss"){
+        console.log(sec.toString().padStart(2,'0'))
+        result2.push(s1);
     }
-}
 }
 
 }
