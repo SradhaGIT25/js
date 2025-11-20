@@ -1,0 +1,46 @@
+#countvalue{
+    position:fixed;
+    margin-top:-50px;
+    margin-left:250px;
+    font-size:25px;
+    display:flex;
+    justify-self: center;
+    padding:10px;
+    padding-left:0px;
+    display:none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#chars{
+    font-size:20px;
+    padding:10px;
+    border-radius:5px;
+    display:flex;
+    justify-self:center;
+}
+
+label{
+    font-size:20px;
+    display:flex;
+    justify-self:center;
+    padding:10px;
+}
+
+#limit{
+    font-size:20px;
+    display:flex;
+    justify-self:center;
+    padding:10px;
+    margin-left:-150px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    background-color: lightgray;
+}
+
+h1{
+    display:flex;
+    justify-self:center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
