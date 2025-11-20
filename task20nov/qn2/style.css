@@ -31,3 +31,6 @@ img{
 body{
     background-color:rgb(245, 214, 245);
 }
+#add{
+    transition:transform 0.5s ease-out;
+}

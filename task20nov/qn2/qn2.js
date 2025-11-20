@@ -11,6 +11,9 @@ function autoslider(){
     }
     image[k].classList.remove("hide");
         k++;
+        if(k>image.length){
+            k=0;
+        }
 }
 let t=setInterval(()=>{
     autoslider();
@@ -32,17 +35,15 @@ container.addEventListener("mouseout",()=>{
  for(i=0;i<image.length;i++){
     let index=i;
     prvbtn.addEventListener("click",()=>{
-        if(index===0){
-            i=image.length-1;
+        index--;
+        if(index<0){
+            index=image.length-1;
         }
-        else{
-            index--;
-        }
-        for(let j=0;j<image.length;j++){
+                    for(let j=0;j<image.length;j++){
             image[j].classList.add("hide");
         }
         image[index].classList.remove("hide");
-
+        k=index;
         
     })
  }
@@ -51,16 +52,15 @@ container.addEventListener("mouseout",()=>{
  for(i=0;i<image.length;i++){
     let index=i;
     nxtbtn.addEventListener("click",()=>{
-         if(index===image.length-1){
-            i=0;
-        }
-        else{
-            index++;
+        index++;
+         if(index>=image.length){
+            index=0;
         }
         for(let j=0;j<image.length;j++){
             image[j].classList.add("hide");
         }
         image[index].classList.remove("hide");
+        k=index
     })
 }
 
