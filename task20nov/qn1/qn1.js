@@ -6,6 +6,7 @@ const scrollContainer=document.getElementById("scroll-Container");
 let p=0;
 async function fetchData(){
     p++;
+    // mark.classList.toggle("hide");
     mark.style.width=`100%`
     const response=await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${p}&_limit=10`);
     const data=await response.json();
@@ -21,7 +22,8 @@ async function fetchData(){
 }
 fetchData()
 add.addEventListener("scroll",()=>{
-if(add.scrollTop+add.clientHeight>=add.scrollHeight-5){
+if(Math.ceil(add.scrollTop+add.clientHeight)>=add.scrollHeight){
+// mark.classList.toggle("hide");
 mark.style.width=`100%`
 fetchData()
 }

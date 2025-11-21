@@ -1,19 +1,19 @@
 const container=document.querySelector(".container");
+const slides=document.querySelector(".slides");
 const image=document.querySelectorAll(".image");
 const prvbtn=document.getElementById("prvbtn");
 const nxtbtn=document.getElementById("nxtbtn");
-let k=0;
 
+ let v=100;
+let len=image.length-1;
 
 function autoslider(){
-    for(let i=0;i<image.length-1;i++){
-        image[i].classList.add("hide");
-    }
-    image[k].classList.remove("hide");
-        k++;
-        if(k>image.length){
-            k=0;
-        }
+   v+=100;
+slides.style.transform=`translate(-${v}%)`;
+if(v===len*100){
+    v=-100;
+}
+
 }
 let t=setInterval(()=>{
     autoslider();
@@ -32,7 +32,9 @@ container.addEventListener("mouseout",()=>{
 
  });
 
- for(i=0;i<image.length;i++){
+ let index=0;
+
+ for(i=0;i<image.length-1;i++){
     let index=i;
     prvbtn.addEventListener("click",()=>{
         index--;
@@ -49,7 +51,7 @@ container.addEventListener("mouseout",()=>{
  }
 
 
- for(i=0;i<image.length;i++){
+ for(i=0;i<image.length-1;i++){
     let index=i;
     nxtbtn.addEventListener("click",()=>{
         index++;
@@ -78,3 +80,17 @@ container.addEventListener("mouseout",()=>{
 //     }
 // }
 // )
+
+
+
+// let index=0;
+
+// function showslides(){
+// slides.forEach(s=>s.classList.add("hide"))
+//   slides[index].classList.remove("hide");
+// }
+
+// function autoslider(){
+//         index=(index+1)%slides.length;
+//         showslides();
+// }
