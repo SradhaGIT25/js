@@ -21,7 +21,7 @@ async function fetchData(){
 }
 fetchData()
 add.addEventListener("scroll",()=>{
-if(add.scrollTop+add.clientHeight>=add.scrollHeight-5){
+if(add.scrollTop+add.clientHeight>=add.scrollHeight){
 mark.style.width=`100%`
 fetchData()
 }
