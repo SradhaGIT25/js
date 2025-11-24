@@ -1,0 +1,39 @@
+#closed button{
+    background-color:red;
+    margin-left:-30px;
+}
+
+#clickme{
+    font-size:25px;
+}
+
+img{
+width:400px;
+height:300px;
+transition-property: height , width;
+transition:2s;
+}
+
+.modalc{
+display:flex;
+margin-top:100px;
+width:100%;
+/* width:250px;
+height:300px; */
+width:0px;
+height:0px;
+justify-self:center;
+transition-property: height  , width ;
+transition:2s;
+}
+
+.main{
+    background-color: lightgrey;
+}
+p{
+    font-size:30px;
+}
+
+.hide{
+    display:none;
+}
