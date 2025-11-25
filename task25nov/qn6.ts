@@ -9,7 +9,7 @@ export default function removeFalsy(array:any):number[] | boolean{
         return false;
     }
     else{
-        let arr:number[] ;
+        let arr:number[]=[];
     let falsy:fal  =[ false, 0, "", null, undefined, NaN]
 for(let i=0;i<array.length;i++){
     if(!falsy.includes(array[i])){
