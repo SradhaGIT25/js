@@ -40,36 +40,15 @@ function test(testCases:obj[]):void{
                 console.log(`test ${index + 1} failed`);
             }
         }
-        else if (typeof testCase.expected === "object") {
-            if (objectEquality(result, testCase.expected) === true || (objectEquality(result, testCase.expected) === false)) {
-                console.log(`test  ${index + 1}  passed`);
+        else if (typeof testCase.expected === "string") {
+            for(let i=0;i<result.length;i++){
+                if(result[i]!==testCase.expected[i]){
+                    console.log(`test ${index + 1} failed`);
+                }
             }
-            else {
-                console.log(`test ${index + 1} " failed`);
-            }
+            console.log(`test ${index + 1} passed`);
+
         }
     });
 }
 
-function objectEquality(obj1:object,obj2:object):boolean{
-    if(typeof obj1!=="object" || typeof obj2!=="object" || Object.entries(obj).length===0){
-        return false;
-    }
-    else{
-    let array1=Object.entries(obj1);
-    let flat1=array1.flat();
-    let array2=Object.entries(obj2);
-    let flat2=array2.flat();
-    if(flat1.length===flat2.length){
-    for(let i=0;i<flat1.length;i++){
-    if(!flat2.includes(flat1[i])){     
-        return false;
-        }
-    }
-        return true;
-    }
-    else{
-        return false;
-    }
-    }
-    }
