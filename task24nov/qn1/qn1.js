@@ -62,10 +62,10 @@ closed.addEventListener("click",()=>{
     add.classList.add("hide");
 })
 
-setTimeout(()=>{
-       mydiv.style.width=`0px`;
-       styleadd.style.border="none";
-    },3000)
+// setTimeout(()=>{
+//        mydiv.style.width=`0px`;
+//        styleadd.style.border="none";
+//     },3000)
 
 const timer=setTimeout(()=>{
     mydiv.classList.add("hide");
